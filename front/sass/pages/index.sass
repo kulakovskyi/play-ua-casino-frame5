@@ -8,38 +8,16 @@ $grey-blue-hover: #D5E1EC
 $dark: #0B1324
 $dark2: #010818
 $transition: .3s ease
-
-//&-button
-//  display: inline-block
-//  font-family: $font-gilroy-med
-//  border-radius: 2px
-//  padding: 14px 26px 12px
-//  white-space: nowrap
-//  &-white
-//    outline: 1px solid $grey-blue
-//    color: $dark2
-//    margin: 0 10px 0 0
-//    transition: outline $transition
-//    &:hover
-//      outline: 1px solid $grey-blue-hover
-//  &-orange
-//    color: $white
-//    background: $orange
-//    border: 1px solid $orange
-//    transition: background-color $transition, border $transition
-//    &:hover
-//      background: $orange-hover
-//      border: 1px solid $orange-hover
-
-
+$grey-main-text: #909090
 
 
 $font-gilroy-reg: 'Gilroy-Regular', sans-serif //400
 $font-gilroy-med: 'Gilroy-Medium', sans-serif //500
+$font-gilroy-semb: 'Gilroy-SemiBold', sans-serif //600
 $font-gayathri: 'Gayathri', sans-serif
 
 body
-  background: $white
+  background: $pink
   overscroll-behavior: none
   -webkit-tap-highlight-color: rgba(0,0,0,0)
   img
@@ -56,169 +34,94 @@ body
 .aside
   overflow: hidden
   display: block
+  padding: 100px 0 80px 0
 
 .casino
-  padding: 100px 0 80px 0
-  background: $pink
+  &__wrapper
+    background: $white
+    padding: 30px
   &__title
-    font-family: $font-gayathri
-    font-size: 44px
-    line-height: 44px
-    text-align: center
-    letter-spacing: -0.01em
-    color: $dark2
-    margin: 0 0 15px 0
-  &__text
-    font-family: $font-gilroy-reg
-    font-size: 16px
-    line-height: 22px
-    text-align: center
-    color: $grey-blue
-    max-width: 865px
-    margin: 0 auto 55px auto
+    font-family: $font-gilroy-semb
+    font-size: 20px
+    line-height: 26px
+    margin: 0 0 20px 0
   &__list
     display: flex
-    justify-content: space-between
-    flex-wrap: nowrap
-
-    &-wrapper
-      overflow-x: scroll
-      margin: 0 0 30px 0
-      -ms-overflow-style: none
-      scrollbar-width: none
+    overflow-x: scroll
+    overflow-y: hidden
   &__item
-    display: flex
-    flex-direction: column
-    border-radius: 2px
-    background: $white
-    padding: 20px 27px 30px
-    min-width: 280px
-    max-width: 280px
-    &:not(:last-child)
+    min-width: 268px
+    max-width: 270px
+    &:first-child
+      min-width: 248px
+      max-width: 250px
+      table
+        td
+          padding-left: 0
+    &:last-child
+      table
+        tr
+          td
+            border-right: none
+    table
+      padding: 0 25px 0 0
+      border-collapse: collapse
+      td
+        border: 1px solid $grey-blue-hover
+        border-left: none
+        border-collapse: collapse
+        padding-right: 27px
+        padding-left: 24px
+        &:first-child
+          border-bottom: none
+      .link
+        border: none
+    &-info
+      padding: 15px 0
+      display: flex
+      align-items: center
+    &-img
+      max-width: 38px
       margin: 0 15px 0 0
-    &-image
-      max-width: 80px
-      align-self: center
-      margin: 0 0 15px 0
-      pointer-events: none
     &-title
       font-family: $font-gilroy-med
-      font-size: 18px
-      line-height: 23px
-      letter-spacing: -0.007em
-      color: $dark2
-      text-align: center
-      margin: 0 0 4px 0
-      pointer-events: none
-    &-reviews
-      display: flex
-      justify-content: center
-      margin: 0 0 16px 0
-      pointer-events: none
-      &-top
-        display: flex
-        align-items: center
-        margin: 0 18px 0 0
-        img
-          &:not(:last-child)
-            margin: 0 10px 0 0
-      &-rating
-        display: flex
-        align-items: center
-        img
-          margin: 0 8px 0 0
-        p
-          font-family: $font-gilroy-med
-          font-size: 14px
-          line-height: 20px
-          letter-spacing: -0.004em
-          color: $grey-blue
-    &-link
+      font-size: 12px
+      line-height: 20px
+      color: $grey-blue
+    &-text
       font-family: $font-gilroy-med
-      display: inline-block
-      padding: 12px 15px 10px
-      border-radius: 2px
-      text-align: center
-      width: 100%
-      outline: 1px solid $grey-blue
+      font-size: 14px
+      line-height: 20px
       color: $dark2
-      margin: 0 0 40px 0
-      transition: outline $transition
-      position: relative
-      &:hover
-        outline: 1px solid $grey-blue-hover
-      &::before
-        content: ''
-        width: 128%
-        position: absolute
-        height: 1px
-        left: 50%
-        transform: translateX(-50%)
-        bottom: -25px
-        background: $pink
-    &-info
-      margin: 0 0 10px 0
-      &-up
-        font-family: $font-gilroy-med
-        font-size: 20px
-        line-height: 25px
-        letter-spacing: -0.0032em
-        margin: 0 0 3px 0
-      &-text
+    &-year
+      padding: 15px 0
+      &-title
         font-family: $font-gilroy-med
         font-size: 14px
         line-height: 20px
         letter-spacing: -0.004em
-        color: $grey-blue
-    &-button
-      display: inline-block
-      font-family: $font-gilroy-med
-      border-radius: 2px
-      white-space: nowrap
-      letter-spacing: -0.007em
-      &-orange
-        padding: 12px 30px 10px
-        margin: 0 20px 0 0
-        color: $white
-        background: $orange
-        border: 1px solid $orange
-        transition: background-color $transition, border $transition
-        &:hover
-          background: $orange-hover
-          border: 1px solid $orange-hover
-      &-transp
+        color: $grey-main-text
+        margin: 0 0 4px 0
+      &-info
         font-family: $font-gilroy-med
-        color: $dark
-        transition: color $transition
-        &:hover
-          color: $orange
-  &__link
-    cursor: pointer
-    font-family: $font-gilroy-med
-    padding: 14px 15px 12px
-    text-align: center
-    width: 100%
-    font-size: 14px
-    line-height: 20px
-    color: $white
-    border-radius: 2px
-    background: $orange
-    transition: background-color $transition
-    &:hover
-      background: $orange-hover
-
-
-
-
-
-
-
-
-
-
-
-
-
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: -0.004em
+        color: $dark2
+    &-link
+      padding: 9px 15px 7px
+      width: 100%
+      display: block
+      text-align: center
+      font-family: $font-gilroy-semb
+      font-size: 12px
+      line-height: 15px
+      color: $white
+      background: $orange
+      border-radius: 2px
+      transition: background-color $transition
+      &:hover
+        background: $orange-hover
 
 
 
